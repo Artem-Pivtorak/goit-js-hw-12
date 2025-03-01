@@ -1,12 +1,49 @@
-.photo-card {
-border-bottom: 1px solid #808080;
-    border-left: 1px solid #808080;
-    border-right: 1px solid #808080;
-    width: 360px;
-    height: 48px;
-    background: #fff;
+/* Контейнер галереї: створюємо адаптивну сітку */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Стилізація картки зображення */
+.photo-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Зображення займає всю ширину картки */
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Блок з інформацією (тексти, посилання) під зображенням */
+.photo-card .info {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Стилізація тексту всередині картки */
+.photo-card .info-item {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Приклад стилізації посилань, якщо потрібно */
+.photo-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
 .photo-card:hover {
     transform: scale(1.03);
 }
@@ -96,4 +133,13 @@ border-bottom: 1px solid #808080;
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
+}
+
+.load-more {
+    background-color: black;
+    color: green;
+    margin-left: 600px;
+    padding-left: 5px;
+    margin-top: 118px;
+    margin-bottom: 158px;
 }
